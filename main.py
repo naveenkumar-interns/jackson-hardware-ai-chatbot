@@ -347,9 +347,10 @@ def clear_chat():
     except Exception as e:
         return jsonify({"error": "Failed to clear chat history"}), 500
     
-# @app.route('/', methods=['GET'])
-# def home():
-#     return jsonify({"message": "working"})
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify({"message": "working"})
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8000)
+    port = int(os.environ.get('PORT', 8000))
+    app.run(debug=True, port=port, host='0.0.0.0')
