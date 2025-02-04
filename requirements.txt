@@ -11,3 +11,4 @@ langchain-huggingface
 Flask
 Flask-Cors
 gunicorn
+werkzeug
